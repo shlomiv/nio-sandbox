@@ -1,11 +1,9 @@
-(ns vxn.test
+(ns nio-sandbox.server
   (:import
      [java.net InetSocketAddress]
      [java.nio ByteBuffer CharBuffer]
      [java.nio.channels ServerSocketChannel Selector SelectionKey]
-     [java.nio.charset Charset])
-  ;(:use index-server.core)
-  )
+     [java.nio.charset Charset]))
 
 (def pool (atom (mapv (fn [_] (ByteBuffer/allocateDirect 1000)) (range 10))))
 
